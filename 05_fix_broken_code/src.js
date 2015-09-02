@@ -21,28 +21,31 @@ module.exports = {
   fizzBuzz: function(number) {
     var divisibleByThree = number % 3;
     var divisibleByFive = number % 5;
+    var output = number;
 
-    if (divisibleByThree && divisibleByFive) {
+    if (divisibleByThree === 0 && divisibleByFive === 0) {
       return 'FizzBuzz';
     } else if (divisibleByThree === 0) {
       return 'Fizz';
     } else if (divisibleByFive === 0) {
       return 'Buzz';
-    } else if (divisibleByThree && divisibleByFive !== 0) {
-      return number;
+    } else {
+      return output;
     }
   },
 
   switcher: function(word) {
-    var output;
+    // var output;
 
     switch (word) {
       case 'foo':
         output = 'bar';
+        break;
       case 'nope':
         output = 'yup';
+        break;
       default:
-        output = 'never output anything. ever!'
+        output = 'never output anything. ever!';
     };
 
     return output;
