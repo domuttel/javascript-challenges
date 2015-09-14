@@ -16,8 +16,6 @@ module.exports = {
     }
   },
 
-  //For next solutions rework with: for loops
-
   first_n: function(array1, num){
     if (array1.length !== 0 && array1.length <= num) {
       return array1;
@@ -57,9 +55,14 @@ module.exports = {
     }
   },
 
-// intersection: function(array1, array2) {
-// },
-
-
+  intersection: function(array1, array2) {
+    var arrayInteresct = [];
+    for (var i = 0; i <= array1.length; i++) {
+      if (array2.indexOf(array1[i]) !== -1) {
+        arrayInteresct.push(array1[i]);
+      }
+    }
+    return arrayInteresct;
+  }
 
 };
